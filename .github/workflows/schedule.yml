@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: submodule update
-      run: git submodule foreach git pull
+      run: git submodule foreach git pull origin main
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         branch: main
