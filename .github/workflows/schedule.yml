@@ -1,4 +1,4 @@
-name: update submodules
+name: Update Submodules
 on:
   workflow_dispatch:
   schedule:
@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: submodule update
-      run: git submodule update
+      run: git submodule update --remote
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         branch: main
