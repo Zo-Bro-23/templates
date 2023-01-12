@@ -15,7 +15,7 @@ jobs:
       with:
         submodules: recursive
     - name: submodule update
-      run: git submodule foreach git pull origin main
+      run: git submodule update --remote --recursive
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         branch: main
