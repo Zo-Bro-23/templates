@@ -1,0 +1,3 @@
+[submodule "moonwalk"]
+	path = moonwalk
+	url = https://github.com/Zo-Bro-23/moonwalk-template
