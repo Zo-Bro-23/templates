@@ -1,0 +1,20 @@
+name: update submodules
+on:
+  workflow_dispatch:
+  schedule:
+  - cron: 30 0 * * *
+permissions:
+  contents: write
+  
+jobs:
+  update:
+    name: update submodules
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: submodule update
+      run: git submodule update
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        branch: main
+        push_options: '--force'
